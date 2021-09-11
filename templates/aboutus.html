@@ -1,0 +1,69 @@
+{% load static %}
+
+<!DOCTYPE HTML>
+<!--
+	Projection by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>ABOUT US</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+	</head>
+	<body class="subpage">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="/" class="logo">HUMSAFAR</a>
+					<nav id="nav">
+						<a href="/">Home</a>
+						<a href="/contactus/">Contact us</a>
+						<a href="/aboutus/">About us</a>
+						{% if user.is_authenticated %}
+							Hello, {{user.username}}
+							<a href="/creatride/">Creat Ride</a>
+							<a href="/serchride/">Serch Ride</a>
+							<a href="/profilepage/">profile</a>
+							<a href="/authentication/logout">Logout</a>
+						{% else %}	
+							<a href="/authentication/register">Register</a>
+							<a href="/authentication/login">Login</a>
+						{% endif %}	
+					</nav>
+					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+				</div>
+			</header>
+
+		<!-- Main -->
+			<section id="main" class="wrapper">
+				<div class="inner">
+					<header class="align-center">
+						<h2>About Us</h2>
+						<p>Information Of application </p>
+					</header>
+
+					<!-- Intro -->
+						<div class="row">
+							<section class="6u 12u$(medium)">
+								<h2>What is HUMSAFAR</h2>
+								<p><strong>A carpool service</strong>If some one want to travel in a car but he doesn't want to spend that much money on fuel then he can give ride to someone whose destination is same as him. and by giving him ride he can minimize the expenses </p>
+								<h3>feature</h3>
+								<p> many people don't want to travel alnoe. for them they can get partner for their journy so that don't need to travel alone.</p>
+								<p>we provide many feature with ride like average speed of traveling.if someone don't want to travel at high speed then he can take ride which has low traveling speed. we also provide no of persion which shows how many people can take that ride. </p>
+							</section>
+
+						</div>
+
+					
+				</div>
+
+			</section>
+
+		
+
+	</body>
+</html>
